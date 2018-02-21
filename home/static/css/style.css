@@ -56,6 +56,7 @@ a.hero-button{
 }
 
 a.hero-button:hover{
+  opacity: 0.9;
   background-color: #ffeb3b;
   color: black;
   font-size: 11pt;
