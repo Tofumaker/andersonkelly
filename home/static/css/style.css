@@ -45,7 +45,8 @@ nav{
   margin-bottom: -16pt;
 }
 
-.hero-button{
+a.hero-button{
+  opacity: 0.8;
   background-color: rgba(0,0,0, 0);
   border: 1px solid gray;
   height: 100%;
@@ -55,7 +56,8 @@ nav{
 }
 
 a.hero-button:hover{
-  background-color: yellow;
+  background-color: #ffeb3b;
   color: black;
   font-size: 11pt;
+  font-weight: 900;
 }
