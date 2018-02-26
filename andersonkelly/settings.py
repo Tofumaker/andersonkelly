@@ -33,7 +33,7 @@ STATICFILES_DIRS = (
 SECRET_KEY = '-l-o5!gg4=6)xrf%bw=&73sb=#x*xb2l^kl7xpvj^87kz)+#g-'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
 ALLOWED_HOSTS = ['*']
 
@@ -128,4 +128,3 @@ USE_I18N = True
 USE_L10N = True
 
 USE_TZ = True
-

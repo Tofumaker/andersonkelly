@@ -3,15 +3,49 @@ body, html{
   font-family: "Raleway";
 }
 
-.bg{
+.bg-ship{
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  z-index: -2;
+
   background-image: linear-gradient(0deg, rgba(0, 0, 50, 0.3), rgba(0, 0, 128, 0.05)),
   url('/static/ship.jpg');
-
-  height: 100%;
+  min-height: 100vh;
+  min-width: 100vw;
 
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+}
+
+@-webkit-keyframes smooth {
+  0% { opacity:0; }
+  45% { opacity:0; }
+  55% { opacity:1; }
+  100% { opacity:1; }
+}
+
+.bg-doc{
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  min-height: 100vh;
+  min-width: 100vw;
+  background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.5)),
+  url('/static/doctor.jpg');
+
+  z-index: -1;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  animation-name: smooth;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+  animation-duration: 8s;
+  animation-direction: alternate;
+
 }
 
 .btn {
@@ -30,10 +64,14 @@ nav{
   box-shadow: 0 0 0 0 rgba(0, 0, 0, 0), 0 0 0 0 rgba(0, 0, 0);
 }
 
+
+
 .hero-container{
-  margin-top: 20vh;
+  margin-top: 30vh;
   margin-left: 7vw;
 }
+
+
 
 .hero-text{
   color: white;
@@ -45,14 +83,44 @@ nav{
   margin-bottom: -16pt;
 }
 
+.brand-logo{
+  max-height: 7vh;
+  height: 7vh;
+}
+
+@media screen and (max-width: 992px) {
+    .brand-logo {
+        max-height: 7vh;
+        height: 7vh;
+    }
+
+    img.logo-img{
+      height: inherit;
+      max-height: inherit;
+      padding-left: 30px;
+    }
+}
+
+img.logo-img{
+  height: inherit;
+  max-height: inherit;
+  position: fixed;
+}
+
 a.hero-button{
   opacity: 0.8;
   background-color: rgba(0,0,0, 0);
-  border: 1px solid gray;
+  border: 2px solid gray;
   height: 100%;
   width: 100%;
   padding: 10px 0px;
   font-size: 10pt;
+}
+
+@media screen and (max-width: 600px){
+  a.hero-button{
+    margin-top: 15px;
+  }
 }
 
 a.hero-button:hover{
